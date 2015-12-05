@@ -27,7 +27,7 @@ minecraft {
 }
 
 dependencies {
-
+	compile files("api/flatUI_pre_rel_0.9j.jar")
 }
 
 processResources

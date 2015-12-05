@@ -1,5 +1,6 @@
 package de.dawik.mcmp;
 
+import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -8,6 +9,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerAboutToStartEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import de.dawik.mcmp.events.MyEvents;
+import de.dawik.mcmp.gui.GUIFront;
 import de.dawik.mcmp.handler.ConfigurationHandler;
 import de.dawik.mcmp.init.Register;
 import de.dawik.mcmp.reference.Reference;
@@ -16,12 +18,14 @@ import de.tisan.mcoref.communication.Communication;
 import de.tisan.mcoref.communication.CommunicationManager;
 import net.minecraftforge.common.MinecraftForge;
 
-@Mod(modid = Reference.MOD_ID, version = Reference.VERSION, name = Reference.MOD_NAME, dependencies = "required-after:appliedenergistics2")
+@Mod(modid = Reference.MOD_ID, version = Reference.VERSION, name = Reference.MOD_NAME, dependencies = "")
 public class MCMPMod {
 	@Mod.Instance(Reference.MOD_ID)
 	public static MCMPMod instance;
 
 	public static Communication con;
+
+	public GUIFront gui;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
