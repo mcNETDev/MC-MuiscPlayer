@@ -1,0 +1,16 @@
+[
+{
+  "modid": "MCMP",
+  "name": "MC-MuiscPlayer",
+  "description": "An music Player for Minecraft",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/mcNETDev/MC-MuiscPlayer",
+  "updateUrl": "",
+  "authorList": ["mcNETDev"],
+  "credits": "heathcliff1998 for the idea",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
